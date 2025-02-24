@@ -1,0 +1,4 @@
+# Kotlin removeIf Bug
+This repository demonstrates a potential issue with Kotlin's `removeIf` function when used with mutable collections.  The bug is subtle; it arises when the `removeIf` predicate's modification of the collection interacts unexpectedly with the iteration process.
+
+The `Bug.kt` file shows a simple example where `removeIf` works as expected, removing even numbers from a list and a map.  However, in more complex scenarios involving nested loops or more intricate collection manipulations, unexpected behavior can occur due to modifications interfering with the iteration process.  A more robust and predictable approach is often to create a new collection containing the elements you wish to keep.
